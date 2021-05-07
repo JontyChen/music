@@ -1,20 +1,22 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-07 10:15:41
+ * @LastEditTime: 2021-05-07 11:33:07
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \music\music\src\App.js
+ */
 
 import React from 'react'
-import {BrowserRouter as Router,Switch,Route,Redirect} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
+import Routes from './router'
 
-
-import Index from './view/index/index'
-import Hot from './component/Hot/Hot'
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/index' component={Index}></Route>
-        <Route path='/hot' component={Hot}></Route>
-        <Redirect from='/' to='/Index'></Redirect>
-      </Switch>
-    </Router>
+   <Router>
+     <Routes />
+   </Router>
   );
 }
 export default App;
